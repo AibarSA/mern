@@ -1,0 +1,5 @@
+{
+    "port": 5000,
+    "jwtSecret": "aibro frontend mern",
+    "mongoUri": "mongodb+srv://aibro:bhunji555@cluster0-cx7wq.mongodb.net/items?retryWrites=true&w=majority"
+}
