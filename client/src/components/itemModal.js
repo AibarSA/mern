@@ -19,11 +19,9 @@ class ItemModal extends Component{
         this.setState({
             modal: !this.setState.modal
         })
-    
     }
 
     
-
     onChange = (e) => {
         this.setState({[e.target.name]: e.target.value})
     }
@@ -33,7 +31,6 @@ class ItemModal extends Component{
 
         const newItem = {
             name: this.state.name
-
         }
 
         this.props.addItem(newItem)

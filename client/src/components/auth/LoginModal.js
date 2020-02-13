@@ -15,8 +15,6 @@ class LoginModal extends Component{
 
     }
 
-    
-
     static propTypes = {
         isAuthenticated: PropTypes.bool,
         error: PropTypes.object.isRequired,
@@ -37,13 +35,10 @@ class LoginModal extends Component{
 
         if(this.state.modal){
             if(isAuthenticated){
-               // this.toggle()
                var modal = document.getElementById("myLogin");
                modal.style.display = "none";
             }
-
         }
-
     }
 
     toggle = () => {
@@ -51,11 +46,8 @@ class LoginModal extends Component{
         this.setState({
             modal: !this.setState.modal
         })
-
-    
     }
 
-    
 
     onChange = (e) => {
         this.setState({[e.target.name]: e.target.value})
@@ -70,11 +62,7 @@ class LoginModal extends Component{
             email,
             password
         }
-
         this.props.login(user)
-
-        
-
     }
 
     render(){
@@ -83,15 +71,12 @@ class LoginModal extends Component{
 
                 <NavLink id="login" onClick={this.toggle} href="#">Login</NavLink> 
                     
-
                 <div id="myLogin" className="modal">
 
                 <div className="modal-content">
                     <span className="closeLogin">&times;</span>
                     {this.state.msg ? (<span class="alert">{this.state.msg}</span>) :null}
                     <form onSubmit={this.handleSubmit} >
-                            
-                                
                                 <label htmlFor="email">Email</label>
                                 <input
                                 type="email"
@@ -111,49 +96,7 @@ class LoginModal extends Component{
                                 <button>Login</button>
                         </form>
                 </div>
-
                 </div>
-                
-                
-                 {/* <Modal isOpen={this.state.modal} toggle={this.toggle}>
-                    <ModalHeader toggle={this.toggle}>Register</ModalHeader>
-                    <ModalBody>
-                     <Form onSubmit={this.handleSubmit} >
-                            <FormGroup>
-                                <Label for="name">Name</Label>
-                                <Input
-                                type="text"
-                                name="name"
-                                id="name"
-                                placeholder="Name"
-                                onChange={this.onChange}
-                                />
-                                <Label for="email">Email</Label>
-                                <Input
-                                type="email"
-                                name="email"
-                                id="email"
-                                placeholder="Email"
-                                onChange={this.onChange}
-                                />
-                                <Label for="password">Password</Label>
-                                <Input
-                                type="password"
-                                name="password"
-                                id="password"
-                                placeholder="Password"
-                                onChange={this.onChange}
-                                />
-                                <Button
-                                color="dark"
-                                style={{marginBottom: '2rem'}} block
-                                >Register</Button>
-                            </FormGroup>
-                        </Form>
-                        
-                    </ModalBody>
-
-                </Modal>  */}
             </div>
         )
     }

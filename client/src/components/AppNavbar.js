@@ -23,18 +23,15 @@ class AppNavbar extends Component {
 
     static propTypes = {
         auth: PropTypes.object.isRequired,
-        
     }
 
     toggle = () => {
         this.setState({
             isOpen: !this.setState.isOpen
         })
-    
     }
 
     render(){
-
         const {isAuthenticated} = this.props.auth
 
         const authLinks = (
@@ -57,7 +54,6 @@ class AppNavbar extends Component {
             </Fragment>
         )
 
-
         return(
             <div>
             <Navbar color="dark" dark expand="sm" className="mb-5">
@@ -70,7 +66,6 @@ class AppNavbar extends Component {
                         </Nav>
                     </Collapse>
                 </Container>
-
             </Navbar>
         </div>
         )

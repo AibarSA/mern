@@ -15,8 +15,6 @@ class RegisterModal extends Component{
 
     }
 
-    
-
     static propTypes = {
         isAuthenticated: PropTypes.bool,
         error: PropTypes.object.isRequired,
@@ -41,9 +39,7 @@ class RegisterModal extends Component{
                var modal = document.getElementById("myModal");
                modal.style.display = "none";
             }
-
         }
-
     }
 
     toggle = () => {
@@ -51,7 +47,6 @@ class RegisterModal extends Component{
         this.setState({
             modal: !this.setState.modal
         })
-    
     }
 
     
@@ -69,13 +64,6 @@ class RegisterModal extends Component{
 
         this.props.register(newUser)
 
-
-
-        // var modal = document.getElementById("myModal");
-        // modal.style.display = "none";
-
-        
-
         this.toggle()
 
     }
@@ -86,11 +74,6 @@ class RegisterModal extends Component{
 
                 <NavLink id="myBtn" onClick={this.toggle} href="#">Register</NavLink> 
 
-                
-
-
-                
-                {/* <button id="myBtn">Register</button> */}
 
                 <div id="myModal" className="modal">
 
@@ -128,55 +111,11 @@ class RegisterModal extends Component{
                                 >Register</button>
                         </form>
                 </div>
-
                 </div>
-                
-                
-                 {/* <Modal isOpen={this.state.modal} toggle={this.toggle}>
-                    <ModalHeader toggle={this.toggle}>Register</ModalHeader>
-                    <ModalBody>
-                     <Form onSubmit={this.handleSubmit} >
-                            <FormGroup>
-                                <Label for="name">Name</Label>
-                                <Input
-                                type="text"
-                                name="name"
-                                id="name"
-                                placeholder="Name"
-                                onChange={this.onChange}
-                                />
-                                <Label for="email">Email</Label>
-                                <Input
-                                type="email"
-                                name="email"
-                                id="email"
-                                placeholder="Email"
-                                onChange={this.onChange}
-                                />
-                                <Label for="password">Password</Label>
-                                <Input
-                                type="password"
-                                name="password"
-                                id="password"
-                                placeholder="Password"
-                                onChange={this.onChange}
-                                />
-                                <Button
-                                color="dark"
-                                style={{marginBottom: '2rem'}} block
-                                >Register</Button>
-                            </FormGroup>
-                        </Form>
-                        
-                    </ModalBody>
-
-                </Modal>  */}
             </div>
         )
     }
-
 }
-
 
 
 const mapStateToProps = (state) => ({
